@@ -7,7 +7,7 @@
 
     100% To use For Personal And Commercial Use.
     IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
-   
+
     ========================================================  */
 
 
@@ -36,7 +36,7 @@ h1 {
 
 
 .pad-adjust {
-    padding-top: 5px; 
+    padding-top: 5px;
     padding-bottom: 5px;
 }
 
@@ -137,7 +137,7 @@ border-top-right-radius: 0px;
 -moz-border-top-right-radius: 0px;
 }
 .btn-lg, .btn-group-lg > .btn {
-border-radius: 0px; 
+border-radius: 0px;
 
 }
 /*=======================================
@@ -151,7 +151,7 @@ border-radius: 0px;
 
 }
 
-#home-sec {
+#accueil-sec {
     padding-top:100px;
     background: url(../img/1.jpg) no-repeat 50% 50%;
 background-attachment: fixed;
@@ -168,12 +168,12 @@ height: auto;
 .head-main {
     font-size:65px ;
     font-weight:900;
-    
+
 }
 
 
 /* ===========================================================
-   NAVBAR CHANGES   
+   NAVBAR CHANGES
    ============================================================*/
 .navbar {
 	font-size: 14px;
@@ -196,7 +196,7 @@ height: auto;
 	letter-spacing: 2px;
 }
 .navbar-inverse :hover .navbar-brand:hover {
-	color: #ffffff;	
+	color: #ffffff;
 }
 .navbar-inverse .navbar-nav > li > a {
 color: #FFFFFF;
@@ -213,7 +213,7 @@ color: #FFFFFF;
     margin: 30px 0px;
     list-style: none;
     text-align: center;
-  
+
 }
 
 
@@ -296,24 +296,3 @@ border: 1px solid #e1e1e1;
     padding:20px 50px 20px 50px;
     text-align:right;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
