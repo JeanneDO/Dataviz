@@ -51,7 +51,7 @@ team_Samoa  = ["Tim Nanai Williams", "Paul Perez", "George Pisi", "Reynold Lee-l
 
 team_New_Zealand = ['Ben Smith', 'Nehe Milner-Skudder', 'Conrad Smith', "Ma'a Nonu", 'Julian Savea', 'Daniel Carter', 'Aaron Smith', 'Wyatt Crockett', 'Dane Coles', 'Owen Franks', 'Brodie Retallick', 'Sam Whitelock', 'Jerome Kaino', 'Richard McCaw', 'Kieran Read'];
 
-team_Namibia = ["Johan Tromp", "David Philander", "Johan Corne Greyling", "Johan Deysel", "Conrad Marais", "Theuns Kotze", "Eugene Jantjes", "Jaco Engels", "Torsten van Jaarsveld", "Johannes Coetzee", "Pieter Jan van Lill", "Tjuee Uanivi", "Jacques Burger", "Tinus Du Plessis", "Leneve Damens"];
+team_Namibia = ['Johan Tromp', 'David Philander', 'Johan Corne Greyling', 'Johan Deysel', 'Conrad Marais', 'Theuns Kotze', 'Eugene Jantjes', 'Jaco Engels', 'Torsten van Jaarsveld', 'Johannes Coetzee', 'Pieter Jan van Lill', 'Tjuee Uanivi', 'Jacques Burger', 'Tinus Du Plessis', 'Leneve Damens'];
 
 team_Argentina = ["Lucas Gonzalez Amorosino", "Matias Moroni", "Santiago Gonzalez Iglesias", "Juan Pablo Socino", "Horacio Agulla", "Juan Martin Hernandez", "Martin Landajo", "Lucas Noguera Paz", "Julian Montoya", "Juan Pablo Orlandi", "Guido Petti", "Matias Alemanno", "Pablo Matera", "Javier Ortego Desio", "Facundo Isa"];
 
