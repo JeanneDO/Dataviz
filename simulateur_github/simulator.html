@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	<script type="text/javascript" src="player_list.js">
+
+
+
+
+</script>
+
+<style>
+.ui-autocomplete { height: 200px; overflow-y: scroll; overflow-x: hidden;}
+
+
+#nation_menu {
+    width: 800px;
+    height:  600px;
+    margin: 30px;
+    margin-left: 350px;
+    border: 1px solid grey;
+  }
+
+span.simulator_head {
+    padding: 80px;
+    height:  0px;
+}
+
+
+#team1 {
+	height:500px; //700px;
+  	width:30%; //400px;
+	margin-top: 80px;
+	float:left;
+}
+
+#field {
+	height:100%; //700px;
+  	width:40%; //1300px;
+	margin-top: -62px;
+	float:left;
+	background-image: url(rugbyfield.png);
+	background-size: 100% 100%;
+	max-width:100%;
+	position: relative;
+}
+
+#submitContain {
+	position:absolute;
+	bottom:-40px;
+	left:37.5%;
+	width:25%;
+	height:5%;
+}
+
+#team2 {
+	height:500px; //700px;
+  	width:30%; //400px;
+	margin-top: 80px;
+	float:left;
+}
+
+
+select.menu {
+    padding: 20px;
+    margin:  40px;
+}
+
+div.overlay_image {
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background: #ffffff;
+    border-style: solid;
+    border-color: red;
+    z-index:1;
+}
+
+#results_screen {
+    -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+    position:absolute;
+    width: 120%;
+    height: 75%;
+    //background: #000000;
+    bottom:10%;
+    left:-10%;
+    z-index:2;
+}
+
+#demo {
+    position:absolute;
+    bottom:62%;
+    left:15%;
+    width:70%;
+    height:3%;
+	padding:10px;
+	opacity: 0.6;
+}
+
+
+.main-container {
+    background: #fff none repeat scroll 0 0;
+    clear: both;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    width: 2200px;
+    height:770px;
+}
+
+input.ply, input.Teams{
+	margin:0;
+	height:100%;
+	width: 100%;
+	border: none;
+	border-color: transparent;
+}
+
+td {
+	padding:0;
+}
+
+select {
+	width: 100%;
+	height: 100%;
+	margin:0;
+	padding:0;
+	border: none;
+	border-color: transparent;
+	-moz-appearance: none;
+    	text-indent: 0.01px;
+    	text-overflow: '';
+}
+
+</style>
+  <title>Simulator</title>
+  <meta charset="UTF-8">
+  <link href="site.css" rel="stylesheet">
+</head>
+
+
+<body>
+<nav id="nav01"></nav>
+
+<!--
+style="height: 1050px;width=500px;clear: both;"
+-->
+<form action="" id="form_teams"> <!--action="form_proc.php"-->
+<div class="main-container">
+
+
+	<div id="team1">
+
+		<table style="max-width:100%;">
+			<tr>
+				<td>Team 1</td>
+   			 	<td>Loosehead prop</td>
+  			</tr>
+  			 <tr>
+   			 	<td> <select class="Teams" id="Team-1" name="Team-1">
+					<option value="England" > England </option>
+					<option value="France" > France </option>
+					<option value="Ireland" > Ireland</option>
+					<option value="Italy" > Italy</option>
+					<option value="Scotland" > Scotland</option>
+					<option value="Wales" > Wales</option>
+					<option value="Random"> Random</option>
+					<option value="Custom" selected> Custom</option>
+				     </select>
+				</td>
+   			 	<td><input class="ply" id="Loosehead-prop_team_1" name="Loosehead-prop_team_1"></td>
+  			</tr>
+
+			<tr>
+				<td>Hooker</td>
+   			 	<td>Tighthead prop</td>
+  			</tr>
+			<tr>
+   			 	<td> <input class="ply" id="Hooker_team_1" name="Hooker_team_1" value=""> </td>
+   			 	<td><input class="ply" id="Tighthead-prop_team_1"  name="Tighthead-prop_team_1" value=""></td>
+  			</tr>
+
+
+
+			<tr>
+				<td>Number-4 lock</td>
+   			 	<td>Number-5 lock</td>
+  			</tr>
+  			 <tr>
+   			 	<td> <input class="ply" id="Number-4-lock_team_1" name="Number-4-lock_team_1" value=""> </td>
+   			 	<td><input class="ply" id="Number-5-lock_team_1" name="Number-5-lock_team_1" value=""></td>
+  			</tr>
+
+
+
+			<tr>
+				<td>Blindside-flanker</td>
+   			 	<td>Number-8</td>
+  			</tr>
+  			 <tr>
+   			 	<td> <input class="ply" id="Blindside-flanker_team_1" name="Blindside-flanker_team_1" value=""> </td>
+   			 	<td><input class="ply" id="Number-8_team_1" name="Number-8_team_1" value=""></td>
+  			</tr>
+
+
+
+
+			<tr>
+				<td>Openside-flanker</td>
+   			 	<td>Scrum-half</td>
+  			</tr>
+  			 <tr>
+   			 	<td> <input class="ply" id="Openside-flanker_team_1" name="Openside-flanker_team_1" value=""> </td>
+   			 	<td><input class="ply" id="Scrum-half_team_1" name="Scrum-half_team_1" value=""></td>
+  			</tr>
+
+
+
+			<tr>
+				<td>Fly-Half</td>
+   			 	<td>Left-wing</td>
+  			</tr>
+  			 <tr>
+   			 	<td> <input class="ply" id="Fly-Half_team_1" name="Fly-Half_team_1" value=""> </td>
+   			 	<td><input class="ply" id="Left-wing_team_1" name="Left-wing_team_1" value=""></td>
+  			</tr>
+
+
+
+			<tr>
+				<td>Inside-Centre</td>
+   			 	<td>Outside-Centre</td>
+  			</tr>
+  			 <tr>
+   			 	<td> <input class="ply" id="Inside-Centre_team_1" name="Inside-Centre_team_1" value=""> </td>
+   			 	<td><input class="ply" id="Outside-Centre_team_1" name="Outside-Centre_team_1" value=""></td>
+  			</tr>
+
+
+
+
+			<tr>
+				<td>Right-wing</td>
+   			 	<td>Fullback</td>
+  			</tr>
+  			 <tr>
+   			 	<td> <input class="ply" id="Right-wing_team_1" name="Right-wing_team_1" value=""> </td>
+   			 	<td><input class="ply" id="Fullback_team_1" name="Fullback_team_1" value=""></td>
+  			</tr>
+		</table>
+
+	</div>
+
+	<div id="field">
+		<!--RESULTS  style="left:35%;bottom:47%;"-->
+		<div id="results_screen" style="background-image:url(rugby_italie_angleterre.jpg);background-size: 100% 100%;" hidden>
+
+		</div>
+
+		<div id="demo" style="color: blue;background:#ffffff;z-index:3;transform: translateY(-50%);text-align:center;" hidden> </div>
+
+		<!-- TEAM 1 -->
+   		<div id="Loosehead-prop_team_1_img"   class="overlay_image" style="left:35%;bottom:47%;" title="Player 1" hidden></div>
+		<div id="Hooker_team_1_img"           class="overlay_image" style="left:30%;bottom:47%;" title="Player 1" hidden></div>
+		<div id="Tighthead-prop_team_1_img"   class="overlay_image" style="left:25%;bottom:47%;" title="Player 1" hidden></div>
+
+		<div id="Number-4-lock_team_1_img"    class="overlay_image" style="left:32.5%;bottom:44%;" title="Player 1" hidden></div>
+		<div id="Number-5-lock_team_1_img"    class="overlay_image" style="left:27.5%;bottom:44%;" title="Player 1" hidden></div>
+
+	       <div id="Blindside-flanker_team_1_img" class="overlay_image" style="left:23%;bottom:43%;" title="Player 1" hidden></div>
+		<div id="Number-8_team_1_img"         class="overlay_image" style="left:37%;bottom:43%;" title="Player 1" hidden></div>
+
+		<div id="Openside-flanker_team_1_img" class="overlay_image" style="left:30%;bottom:41%;" title="Player 1" hidden></div>
+		<div id="Scrum-half_team_1_img"       class="overlay_image" style="left:35%;bottom:38%;" title="Player 1" hidden></div>
+		<div id="Fly-Half_team_1_img"         class="overlay_image" style="left:40%;bottom:35%;" title="Player 1" hidden></div>
+		<div id="Left-wing_team_1_img"        class="overlay_image" style="left:45%;bottom:32%;" title="Player 1" hidden></div>
+		<div id="Inside-Centre_team_1_img"    class="overlay_image" style="left:50%;bottom:29%;" title="Player 1" hidden></div>
+		<div id="Outside-Centre_team_1_img"   class="overlay_image" style="left:55%;bottom:26%;" title="Player 1" hidden></div>
+
+		<div id="Right-wing_team_1_img"       class="overlay_image" style="left:38%;bottom:23%;" title="Player 1" hidden></div>
+		<div id="Fullback_team_1_img"         class="overlay_image" style="left:21%;bottom:25%;" title="Player 1" hidden></div>
+
+		<!-- TEAM 2 -->
+
+		<div id="Loosehead-prop_team_2_img"   class="overlay_image" style="right:35%;top:47%;" title="Player 1" hidden></div>
+		<div id="Hooker_team_2_img"           class="overlay_image" style="right:30%;top:47%;" title="Player 1" hidden></div>
+		<div id="Tighthead-prop_team_2_img"   class="overlay_image" style="right:25%;top:47%;" title="Player 1" hidden></div>
+
+		<div id="Number-4-lock_team_2_img"    class="overlay_image" style="right:32.5%;top:44%;" title="Player 1" hidden></div>
+		<div id="Number-5-lock_team_2_img"    class="overlay_image" style="right:27.5%;top:44%;" title="Player 1" hidden></div>
+
+	       <div id="Blindside-flanker_team_2_img" class="overlay_image" style="right:23%;top:43%;" title="Player 1" hidden></div>
+		<div id="Number-8_team_2_img"         class="overlay_image" style="right:37%;top:43%;" title="Player 1" hidden></div>
+
+		<div id="Openside-flanker_team_2_img" class="overlay_image" style="right:30%;top:41%;" title="Player 1" hidden></div>
+		<div id="Scrum-half_team_2_img"       class="overlay_image" style="right:35%;top:38%;" title="Player 1" hidden></div>
+		<div id="Fly-Half_team_2_img"         class="overlay_image" style="right:40%;top:35%;" title="Player 1" hidden></div>
+		<div id="Left-wing_team_2_img"        class="overlay_image" style="right:45%;top:32%;" title="Player 1" hidden></div>
+		<div id="Inside-Centre_team_2_img"    class="overlay_image" style="right:50%;top:29%;" title="Player 1" hidden></div>
+		<div id="Outside-Centre_team_2_img"   class="overlay_image" style="right:55%;top:26%;" title="Player 1" hidden></div>
+
+		<div id="Right-wing_team_2_img"       class="overlay_image" style="right:38%;top:23%;" title="Player 1" hidden></div>
+		<div id="Fullback_team_2_img"         class="overlay_image" style="right:21%;top:25%;" title="Player 1" hidden></div>
+
+		<div id="submitContain">
+ 			<input id="submitbutton" form="form_teams" type="submit" value="Get Selected Values"/> <!--  form="form_teams"-->
+		</div>
+
+	</div>
+</form>
+
+	<div id="team2">
+
+		<table style="max-width:100%;">
+			<tr>
+				<td>Team 2</td>
+   			 	<td>Loosehead prop</td>
+  			</tr>
+  			 <tr>
+   			 	<td> <select class="Teams" id="Team-2" name="Team-2">
+					<option value="England" > England </option>
+					<option value="France" > France </option>
+					<option value="Ireland" > Ireland</option>
+					<option value="Italy" > Italy</option>
+					<option value="Scotland" > Scotland</option>
+					<option value="Wales" > Wales</option>
+					<option value="Random"> Random</option>
+					<option value="Custom" selected> Custom</option>
+				     </select>
+				</td>
+   			 	<td><input class="ply" id="Loosehead-prop_team_2" name="Loosehead-prop_team_2"></td>
+  			</tr>
+
+
+			<tr>
+				<td>Hooker</td>
+   			 	<td>Tighthead prop</td>
+  			</tr>
+			<tr>
+   			 	<td> <input class="ply" id="Hooker_team_2" name="Hooker_team_2" value=""> </td>
+   			 	<td><input class="ply" id="Tighthead-prop_team_2"  name="Tighthead-prop_team_2"></td>
+  			</tr>
+
+
+
+			<tr>
+				<td>Number-4 lock</td>
+   			 	<td>Number-5 lock</td>
+  			</tr>
+  			 <tr>
+   			 	<td> <input class="ply" id="Number-4-lock_team_2" name="Number-4-lock_team_2"> </td>
+   			 	<td><input class="ply" id="Number-5-lock_team_2" name="Number-5-lock_team_2"></td>
+  			</tr>
+
+
+
+			<tr>
+				<td>Blindside-flanker</td>
+   			 	<td>Number-8</td>
+  			</tr>
+  			 <tr>
+   			 	<td> <input class="ply" id="Blindside-flanker_team_2" name="Blindside-flanker_team_2"> </td>
+   			 	<td><input class="ply" id="Number-8_team_2" name="Number-8_team_2"></td>
+  			</tr>
+
+
+
+
+			<tr>
+				<td>Openside-flanker</td>
+   			 	<td>Scrum-half</td>
+  			</tr>
+  			 <tr>
+   			 	<td> <input class="ply" id="Openside-flanker_team_2" name="Openside-flanker_team_2"> </td>
+   			 	<td><input class="ply" id="Scrum-half_team_2" name="Scrum-half_team_2"></td>
+  			</tr>
+
+
+
+			<tr>
+				<td>Fly-Half</td>
+   			 	<td>Left-wing</td>
+  			</tr>
+  			 <tr>
+   			 	<td> <input class="ply" id="Fly-Half_team_2" name="Fly-Half_team_2"> </td>
+   			 	<td><input class="ply" id="Left-wing_team_2" name="Left-wing_team_2"></td>
+  			</tr>
+
+
+
+			<tr>
+				<td>Inside-Centre</td>
+   			 	<td>Outside-Centre</td>
+  			</tr>
+  			 <tr>
+   			 	<td> <input class="ply" id="Inside-Centre_team_2" name="Inside-Centre_team_2"> </td>
+   			 	<td><input class="ply" id="Outside-Centre_team_2" name="Outside-Centre_team_2"></td>
+  			</tr>
+
+
+
+
+			<tr>
+				<td>Right-wing</td>
+   			 	<td>Fullback</td>
+  			</tr>
+  			 <tr>
+   			 	<td> <input class="ply" id="Right-wing_team_2" name="Right-wing_team_2"> </td>
+   			 	<td> <input class="ply" id="Fullback_team_2" name="Fullback_team_2"></td>
+  			</tr>
+		</table>
+
+	</div>
+
+<!--
+	<div  >
+
+	<form id="nation_menu" action="test.php" method="post" style="text-align:center;background-image:url(rugby_italie_angleterre.jpg);background-size: 100% 100%;" action="action_page.php">
+
+  		<br> <br>
+
+ 		<span style="color: rgba(255,0,0,0.65);font-size: 200%;font-family:Impact, Charcoal, sans-serif;text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;" class="simulator_head">Team 1</span>
+  		<span style="color: rgba(0,0,255,0.45);font-size: 200%;font-family:Impact, Charcoal, sans-serif;text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,0 0 0.2em #87F" class="simulator_head">Team 2</span>
+
+  		<br><br>
+
+		  <select input style="color: rgba(255,0,0,0.65);font-size: 200%;font-family:Impact, Charcoal, sans-serif" class="menu" name="team1">
+   			 <option value="England" selected> England </option>
+   			 <option value="France" > France </option>
+   			 <option value="Scotland"> Scotland </option>
+   			 <option value="Wales"> Wales </option>
+    			<option value="Rd"> Random </option>
+  		</select>
+
+ 		<select style="color: rgba(0,0,255,0.65);font-size: 200%;font-family:Impact, Charcoal, sans-serif" class="menu" name="team2">
+  			  <option value="England" > England </option>
+ 			   <option value="France" selected> France </option>
+    			<option value="Scotland"> Scotland </option>
+   			 <option value="Wales"> Wales </option>
+    			<option value="Rd"> Random </option>
+  		</select>
+
+  		<br><br>
+
+ 		</form>
+
+	</div>
+
+<div>
+   		 <div><img src="rugbyfield.png" height="700" width="1300"></div>
+   		 <div id="overlay_image" title="Player 1"></div>
+	</div>
+-->
+
+	 <br style="clear: left;" />
+</div>
+
+<p id="demo1"></p>
+
+
+
+<div id="main">
+<br>
+<h1>Simulator</h1>
+
+
+<footer id="foot01"></footer>
+</div>
+
+<script src="script.js">
+
+</script>
+
+</body>
+</html>
