@@ -202,7 +202,7 @@ $(player_pos).each(function( index,value_node ) {
 	$('#form_teams').submit(function () {
 		
 
-	document.getElementById("demo").innerHTML = "Un instant s'il-vous-plaît...";
+	document.getElementById("demo").innerHTML = "Un instant s'il-vous-plait...";
 	$.ajax({
     url: "form_proc.php",
     type: 'POST',
