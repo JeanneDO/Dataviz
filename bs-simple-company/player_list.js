@@ -33,39 +33,39 @@ var player_pos = ["Fullback","Right-wing","Outside-Centre","Inside-Centre",
 
 team_England  = ["Billy Vunipola", "Chris Robshaw", "James Haskell", "Courtney Lawes", "Geoffrey Parling", "Dan Cole", "Dylan Hartley", "Mike Brown", "Anthony Watson", "Jonathan Joseph", "Luther Burrell", "Jack Nowell", "George Ford", "Joe Marler", "Ben Youngs"];
 
-team_Ireland  = ["James Heaslip", "Sean O'Brien", "Peter O'Mahony", "Paul O'Connell", "Devin Toner", "Mike Ross", "Rory Best", "Robert Kearney", "Tommy Bowe", "Jared Payne", "Robbie Henshaw", "Luke Fitzgerald", "Jonathan Sexton", "Cian Healy", "Conor Murray"];
+team_Ireland  = ['Simon Zebo', 'Andrew Trimble', 'Jared Payne', 'Robbie Henshaw', 'Keith Earls', 'Jonathan Sexton', 'Conor Murray', 'Jack McGrath', 'Rory Best', 'Mike Ross', 'Donnacha Ryan', 'Devin Toner', 'CJ Stander', 'Josh van der Flier', 'James Heaslip'];
 
-team_Italy    = ["Samu Vunisa", "Mauro Bergamasco", "Francesco Minto", "Raffaele Joshua Furno", "George Fabio Biagi", "Martin Castrogiovanni", "Leonardo Ghiraldini", "Luke McLean", "Leonardo Sarto", "Luca Morisi", "Andrea Masi", "Giovanbattista Venditti", "Kelly Haimona", "Michele Rizzo", "Eduardo Gori"];
+team_Italy    = ['David Odiete', 'Leonardo Sarto', 'Michele Campagnaro', 'Gonzalo Garcia', 'Mattia Bellini', 'Edoardo Padovani', 'Guglielmo Palazzani', 'Andrea Lovotti', 'Davide Giazzon', 'Dario Chistolini', 'George Fabio Biagi', 'Marco Fuser', 'Francesco Minto', 'Alessandro Zanni', 'Sergio Parisse'];
 
 team_France   = ['Scott Spedding', 'Noa Nakaitaci', 'Alexandre Dumoulin', 'Wesley Fofana', 'Brice Dulin', 'Frederic Michalak', 'Morgan Parra', 'Eddy Ben Arous', 'Guilhem Guirado', 'Rabah Slimani', 'Pascal Pape', 'Yohan Maestri', 'Thierry Dussautoir', 'Bernard Le Roux', 'Louis Picamoles'];
 
-team_Scotland = ["David Denton", "Blair Cowan", "Adam Ashe", "Jonny Gray", "James Hamilton", "Euan Murray", "Ross Ford", "Stuart Hogg", "Douglas Fife", "Mark Bennett", "Matt Scott", "Tommy Seymour", "Finn Russell", "Ryan Grant", "Greig Laidlaw"];
+team_Scotland = ['Stuart Hogg', 'Sean Maitland', 'Mark Bennett', 'Matt Scott', 'Tommy Seymour', 'Finn Russell', 'Greig Laidlaw', 'Alasdair Dickinson', 'Ross Ford', 'Willem Petrus Nel', 'Richie Gray', 'Jonny Gray', 'Ryan Wilson', 'John Hardie', 'David Denton'];
  
-team_Wales    = ["Toby Faletau", "Sam Warburton", "Dan Lydiatt", "Alan Wyn Jones", "Luke Charteris", "Aaron Jarvis", "Scott Baldwin", "Leigh Halfpenny", "George North", "Jon Davies", "Jamie Roberts", "Liam Williams", "Daniel Biggar", "Rob Evans", "Rhys Webb"];
+team_Wales    = ['Liam Williams', 'George North', 'Jon Davies', 'Jamie Roberts', 'Tom James', 'Daniel Biggar', 'Gareth Davies', 'Rob Evans', 'Scott Baldwin', 'Samson Lee', 'Luke Charteris', 'Alan Wyn Jones', 'Sam Warburton', 'Justin Tipuric', 'Toby Faletau'];
 
-team_Uruguay  = ["Gaston Mieres", "Leandro Leivas", "Joaquin Prada", "Andres Vilaseca", "Rodrigo Silva", "Felipe Berchesi", "Agustin Ormaechea", "Mateo Sanguinetti", "German Kessler", "Mario Sagario", "Santiago Vilaseca", "Franco Lammana", "Juan de Freitas", "Matias Beer", "Juan Manuel Gaminara"];
+team_Uruguay  = ['Gaston Mieres', 'Leandro Leivas', 'Joaquin Prada', 'Andres Vilaseca', 'Rodrigo Silva', 'Felipe Berchesi', 'Agustin Ormaechea', 'Mateo Sanguinetti', 'German Kessler', 'Mario Sagario', 'Santiago Vilaseca', 'Franco Lammana', 'Juan de Freitas', 'Matias Beer', 'Juan Manuel Gaminara'];
 
-team_Australia   = ["Kurtley Beale", "Joseph Tomane", "Henry Speight", "Matt Toomua", "Drew Mitchell", "Quade Cooper", "Nick Phipps", "Scott Sio", "Tatafu Polota Nau", "Toby Smith", "Dean Mumm", "Will Skelton", "Ben McCalman", "Sean McMahon", "Wyclif Palu"];
+team_Australia   = ['Kurtley Beale', 'Joseph Tomane', 'Henry Speight', 'Matt Toomua', 'Drew Mitchell', 'Quade Cooper', 'Nick Phipps', 'Scott Sio', 'Tatafu Polota Nau', 'Toby Smith', 'Dean Mumm', 'Will Skelton', 'Ben McCalman', 'Sean McMahon', 'Wyclif Palu'];
 	
-team_Samoa  = ["Tim Nanai Williams", "Paul Perez", "George Pisi", "Reynold Lee-lo", "Fa'atoina Autagavaia", "Tusi Pisi", "Kahn Fotuali'i", "Sakaria Taulafo", "Manu Leiataua", "Census Johnston", "Filo Paulo", "Kane Thompson", "Maurie Fa'asavlu", "Jack Lam", "Alafoti Faosilivia"];
+team_Samoa  = ['Tim Nanai Williams', 'Paul Perez', 'George Pisi', 'Reynold Lee-lo', "Fa'atoina Autagavaia", 'Tusi Pisi', "Kahn Fotuali'i", 'Sakaria Taulafo', 'Manu Leiataua', 'Census Johnston', 'Filo Paulo', 'Kane Thompson', "Maurie Fa'asavlu", 'Jack Lam', 'Alafoti Faosilivia'];
 
 team_New_Zealand = ['Ben Smith', 'Nehe Milner-Skudder', 'Conrad Smith', "Ma'a Nonu", 'Julian Savea', 'Daniel Carter', 'Aaron Smith', 'Wyatt Crockett', 'Dane Coles', 'Owen Franks', 'Brodie Retallick', 'Sam Whitelock', 'Jerome Kaino', 'Richard McCaw', 'Kieran Read'];
 
-team_Namibia = ['Johan Tromp', 'David Philander', 'Johan Corne Greyling', 'Johan Deysel', 'Conrad Marais', 'Theuns Kotze', 'Eugene Jantjes', 'Jaco Engels', 'Torsten van Jaarsveld', 'Johannes Coetzee', 'Pieter Jan van Lill', 'Tjuee Uanivi', 'Jacques Burger', 'Tinus Du Plessis', 'Leneve Damens'];
+team_Namibia = ["Johan Tromp", "David Philander", "Johan Corne Greyling", "Johan Deysel", "Conrad Marais", "Theuns Kotze", "Eugene Jantjes", "Jaco Engels", "Torsten van Jaarsveld", "Johannes Coetzee", "Pieter Jan van Lill", "Tjuee Uanivi", "Jacques Burger", "Tinus Du Plessis", "Leneve Damens"];
 
-team_Argentina = ["Lucas Gonzalez Amorosino", "Matias Moroni", "Santiago Gonzalez Iglesias", "Juan Pablo Socino", "Horacio Agulla", "Juan Martin Hernandez", "Martin Landajo", "Lucas Noguera Paz", "Julian Montoya", "Juan Pablo Orlandi", "Guido Petti", "Matias Alemanno", "Pablo Matera", "Javier Ortego Desio", "Facundo Isa"];
+team_Argentina = ['Lucas Gonzalez Amorosino', 'Matias Moroni', 'Santiago Gonzalez Iglesias', 'Juan Pablo Socino', 'Horacio Agulla', 'Juan Martin Hernandez', 'Martin Landajo', 'Lucas Noguera Paz', 'Julian Montoya', 'Juan Pablo Orlandi', 'Guido Petti', 'Matias Alemanno', 'Pablo Matera', 'Javier Ortego Desio', 'Facundo Isa'];
 
-team_England9Women   = ["Harriet Miller-Mills", "Hannah Field", "Alexandra Matthews", "Rowena Burnfield", "Tamara Taylor", "Justine Lucas", "Victoria Fleetwood", "Fiona Pocock", "Ruth Laybourn", "Abigail Brown", "Ceri Large", "Lydia Thompson", "Katy McLean", "Rochelle Clarke", "Bianca Blackburn"];
+team_England9Women   = ['Fiona Pocock', 'Ruth Laybourn', 'Amber Reed', 'Ceri Large', 'Lydia Thompson', 'Katy McLean', 'Bianca Blackburn', 'Rochelle Clarke', 'Victoria Fleetwood', 'Justine Lucas', 'Tamara Taylor', 'Abbie Scott', 'Hannah Gallagher', 'Hannah Field', 'Francesca Matthews'];
 
-team_Scotland9Women    = ["Jade Konkel", "Karen Dunbar", "Rachael Cook", "Emma Wassell", "Deborah McCormack", "Tracy Balmer", "Lana Skeldon", "Chloe Rollie", "Eilidh Sinclair", "Hannah Smith", "Nuala Deans", "Abi Evans", "Lisa Martin", "Lisa Robertson", "Sarah Law"];
+team_Scotland9Women    = ['Chloe Rollie', 'Lauren Harris', 'Megan Gaffney', 'Lisa Thomson', 'Rhona Lloyd', 'Lisa Martin', 'Sarah Law', 'Tracy Balmer', 'Lana Skeldon', 'Lindsay Smith', 'Deborah McCormack', 'Emma Wassell', 'Jemma Forsyth', 'Karen Dunbar', 'Jade Konkel'];
 
-team_Italy9Women  = ["Elisa Giordano", "Isabella Locatelli", "Michela Este", "Alice Trevisan", "Elisa Pillotti", "Melissa Bettoni", "Lucia Cammarano", "Manuela Furlan", "Maria Magatti", "Maria Cioffi", "Beatrice Rigoni", "Sofie Stefan", "Veronica Schiavon", "Elisa Cucchiella", "Sara Barratin"];
+team_Italy9Women  = ['Manuela Furlan', 'Michela Sillari', 'Maria Cioffi', 'Beatrice Rigoni', 'Sofie Stefan', 'Veronica Schiavon', 'Sara Barratin', 'Elisa Cucchiella', 'Melissa Bettoni', 'Lucia Gai', 'Alice Trevisan', 'Isabella Locatelli', 'Ilarla Arrighetti', 'Michela Este', 'Elisa Giordano'];
 
-team_France9Women  = ["Safi N'Daye", "Pauline Rayssac", "Coumba Tombe Diallo", "Audrey Forlani", "Celine Ferer", "Julie Duval", "Gaellle Mignot", "Julie Billes", "Caroline Boujard", "Lucille Godiveau", "Elodie Poublan", "Laura Delas", "Audrey Abadie", "Lisa Arricastre", "Yanna Rivoalen"];
+team_France9Women  = ['Julie Billes', 'Caroline Boujard', 'Lucille Godiveau', 'Elodie Poublan', 'Laura Delas', 'Audrey Abadie', 'Yanna Rivoalen', 'Lisa Arricastre', 'Gaellle Mignot', 'Julie Duval', 'Celine Ferer', 'Audrey Forlani', 'Coumba Tombe Diallo', 'Pauline Rayssac', "Safi N'Daye"];
 
-team_Wales9Women  = ["Sioned Harries", "Ajisha Butchers", "Sian Williams", "Siwan Lillicrap", "Rebecca Rowe", "Amy Evans", "Carys Phillips", "Dyddgu Hywel", "Adi Taviner", "Robyn Wilkins", "Hannah Jones", "Elen Evans", "Elinor Snowsill", "Megan York", "Keira Bevan"];
+team_Wales9Women  = ['Adi Taviner', 'Elen Evans', 'Kerin Lake', 'Hannah Jones', 'Beth Dainton', 'Robyn Wilkins', 'Keira Bevan', 'Megan York', 'Carys Phillips', 'Amy Evans', 'Rebecca Rowe', 'Sioned Harries', 'Rachel Taylor', 'Sian Williams', 'Shona Powell-Hughes'];
 
-team_Ireland9Women  = ["Heather O'Brien", "Clare Molloy", "Paula Fitzpatrick", "Marie Louise Reilly", "Sophie Spence", "Ruth O'Reilly", "Cliodna Moloney", "Niamh Briggs", "Elise O'Byrne-White", "Aine Donnelly", "Sene Naoupu", "Mairead Coyne", "Nikki Caughey", "Allis Egan", "Larissa Muldoon"];
+team_Ireland9Women  = ['Niamh Briggs', "Elise O'Byrne-White", 'Aine Donnelly', 'Sene Naoupu', 'Mairead Coyne', 'Nikki Caughey', 'Larissa Muldoon', 'Allis Egan', 'Zoe Grattage', "Ruth O'Reilly", 'Sophie Spence', 'Marie Louise Reilly', 'Paula Fitzpatrick', 'Clare Molloy', "Heather O'Brien"];
 
 
 
