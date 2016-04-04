@@ -55,6 +55,7 @@ span.simulator_head {
   	width:30%; //400px;
 	top: 0%;
 	float:left;
+
 }
 
 #field {
@@ -88,6 +89,7 @@ span.simulator_head {
 
 select.menu {
     padding: 20px;
+    text-align:center;
     margin:  40px;
 }
 
@@ -171,8 +173,9 @@ select {
 	border: none;
 	border-color: transparent;
 	-moz-appearance: none;
-    	text-indent: 0.01px;
+    	text-indent: 1px;
     	text-overflow: '';
+      text-align: center;
 }
 
 </style>
@@ -435,14 +438,15 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
            <div class="row ">
                                 <div class="col-md-12 text-center ">
 
-<h1> Simulateur de matchs </h1>
+<h2> Et en bonus : Découvre notre simulateur de matchs ! </h2>
+<p> Construis, sélectionne au hasard, ou choisis tes équipes et laisse notre simulateur te dire qui gagnerait ! </p>
 
 		<form action="" id="form_teams"> <!--action="form_proc.php"-->
 		<div class="main-container">
 
 
 	<div id="team1">
-		<div style="padding:0;margin0;width:100%;height:20%;font-size:30px;">
+		<div style="padding:0;margin0;width:100%;height:20%;font-size:20px;">
 			<select class="Teams" id="Team-1" name="Team-1" style="text-align:center;">
 					<option value="England" > England </option>
 					<option value="France" > France </option>
@@ -470,7 +474,7 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
 
 			<tr >
-				<td>Hooker</td>
+				<td>Talonneur</td>
 
   			</tr>
   			 <tr>
@@ -479,8 +483,8 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 		</table>
 		<table style="max-width:100%;">
 			<tr>
-   			 	<td>Tighthead prop</td>
-				<td>Loosehead prop</td>
+   			 	<td>Pilier Droit</td>
+				<td>Pilier Gauche</td>
   			</tr>
 			<tr>
 				<td><input class="ply" id="Loosehead-prop_team_1" name="Loosehead-prop_team_1"></td>
@@ -490,8 +494,8 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
 
 			<tr>
-				<td>Number-4 lock</td>
-   			 	<td>Number-5 lock</td>
+				<td>2ème Ligne</td>
+   			 	<td>2ème Ligne</td>
   			</tr>
   			 <tr>
    			 	<td> <input class="ply" id="Number-4-lock_team_1" name="Number-4-lock_team_1" value=""> </td>
@@ -501,8 +505,8 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
 
 			<tr>
-				<td>Blindside-flanker</td>
-   			 	<td>Number-8</td>
+				<td>3ème Ligne Aile</td>
+   			 	<td>Numéro 8</td>
   			</tr>
   			 <tr>
    			 	<td> <input class="ply" id="Blindside-flanker_team_1" name="Blindside-flanker_team_1" value=""> </td>
@@ -513,8 +517,8 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
 
 			<tr>
-				<td>Openside-flanker</td>
-   			 	<td>Scrum-half</td>
+				<td>3ème Ligne Aile</td>
+   			 	<td>Demi de Mélée</td>
   			</tr>
   			 <tr>
    			 	<td> <input class="ply" id="Openside-flanker_team_1" name="Openside-flanker_team_1" value=""> </td>
@@ -524,8 +528,8 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
 
 			<tr>
-				<td>Fly-Half</td>
-   			 	<td>Left-wing</td>
+				<td>Demi d'Ouverture</td>
+   			 	<td>Ailier</td>
   			</tr>
   			 <tr>
    			 	<td> <input class="ply" id="Fly-Half_team_1" name="Fly-Half_team_1" value=""> </td>
@@ -535,8 +539,8 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
 
 			<tr>
-				<td>Inside-Centre</td>
-   			 	<td>Outside-Centre</td>
+				<td>Premier Centre</td>
+   			 	<td>Deuxième Centre</td>
   			</tr>
   			 <tr>
    			 	<td> <input class="ply" id="Inside-Centre_team_1" name="Inside-Centre_team_1" value=""> </td>
@@ -547,8 +551,8 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
 
 			<tr>
-				<td>Right-wing</td>
-   			 	<td>Fullback</td>
+				<td>Ailier</td>
+   			 	<td>Arrière</td>
   			</tr>
   			 <tr>
    			 	<td> <input class="ply" id="Right-wing_team_1" name="Right-wing_team_1" value=""> </td>
@@ -613,12 +617,12 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 		<div id="Fullback_team_2_img"         class="overlay_image" style="left:46%;top:15.25%;" title="Player 1" hidden></div>
 
 		<div id="submitContain">
- 			<input id="submitbutton" form="form_teams" type="submit" value="Get Selected Values"/> <!--  form="form_teams"-->
+ 			<input id="submitbutton" form="form_teams" type="submit" value="Voir le Résultat"/> <!--  form="form_teams"-->
 		</div>
 
 	</div>
 	<div id="team2">
-		<div style="padding:0;margin0;width:100%;height:20%;font-size:30px;">
+		<div style="padding:0;margin0;width:100%;height:20%;font-size:20px;">
 			<select class="Teams" id="Team-2" name="Team-2" style="text-align:center;">
 					<option value="England" > England </option>
 					<option value="France" > France </option>
@@ -647,7 +651,7 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
 			<tr >
 				<td style="background-color:#ffffff;border-bottom-color: #ffffff;border-top-color: #ffffff;border-left-color: #ffffff;"></td>
-				<td>Hooker</td>
+				<td>Talonneur</td>
   			</tr>
   			 <tr>
 				<td style="border-bottom-color: #ffffff;border-top-color: #ffffff;border-left-color: #ffffff;"></td>
@@ -656,8 +660,8 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 		</table>
 		<table style="max-width:100%;">
 			<tr>
-   			 	<td>Tighthead prop</td>
-				<td>Loosehead prop</td>
+   			 	<td>Pilier Droit</td>
+				<td>Pilier Gauche</td>
   			</tr>
 			<tr>
 				<td><input class="ply" id="Loosehead-prop_team_2" name="Loosehead-prop_team_2"></td>
@@ -667,8 +671,8 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
 
 			<tr>
-				<td>Number-4 lock</td>
-   			 	<td>Number-5 lock</td>
+				<td>2ème Ligne</td>
+   			 	<td>2ème Ligne</td>
   			</tr>
   			 <tr>
    			 	<td> <input class="ply" id="Number-4-lock_team_2" name="Number-4-lock_team_2" value=""> </td>
@@ -678,8 +682,8 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
 
 			<tr>
-				<td>Blindside-flanker</td>
-   			 	<td>Number-8</td>
+				<td>3ème Ligne Aile</td>
+   			 	<td>Numéro 8</td>
   			</tr>
   			 <tr>
    			 	<td> <input class="ply" id="Blindside-flanker_team_2" name="Blindside-flanker_team_2" value=""> </td>
@@ -690,8 +694,8 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
 
 			<tr>
-				<td>Openside-flanker</td>
-   			 	<td>Scrum-half</td>
+				<td>3ème Ligne Aile</td>
+   			 	<td>Demi de Mélée</td>
   			</tr>
   			 <tr>
    			 	<td> <input class="ply" id="Openside-flanker_team_2" name="Openside-flanker_team_2" value=""> </td>
@@ -701,8 +705,8 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
 
 			<tr>
-				<td>Fly-Half</td>
-   			 	<td>Left-wing</td>
+				<td>Demi d'Ouverture</td>
+   			 	<td>Ailier</td>
   			</tr>
   			 <tr>
    			 	<td> <input class="ply" id="Fly-Half_team_2" name="Fly-Half_team_2" value=""> </td>
@@ -712,8 +716,8 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
 
 			<tr>
-				<td>Inside-Centre</td>
-   			 	<td>Outside-Centre</td>
+				<td>Premier Centre</td>
+   			 	<td>Deuxième Centre</td>
   			</tr>
   			 <tr>
    			 	<td> <input class="ply" id="Inside-Centre_team_2" name="Inside-Centre_team_2" value=""> </td>
@@ -724,8 +728,8 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
 
 			<tr>
-				<td>Right-wing</td>
-   			 	<td>Fullback</td>
+				<td>Ailier</td>
+   			 	<td>Arrière</td>
   			</tr>
   			 <tr>
    			 	<td> <input class="ply" id="Right-wing_team_2" name="Right-wing_team_2" value=""> </td>
@@ -757,7 +761,7 @@ Lorem ipsum dolor sit amet, accumsan.  posuere lectus et, fringilla augue.
 
     <!--FOOTER SECTION -->
     <div id="footer">
-        2014 www.attrapezlapasteque.com | Tous droits réservés
+        2016 www.attrapezlapasteque.com | Tous droits réservés
       <br>  Crédits photos : (Aug. 23, 2010 - Source: Bryn Lennon/Getty Images Europe)
 
     </div>
